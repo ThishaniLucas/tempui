@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Booking</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/main.css" rel="stylesheet" >
+  </head>
+ 
+  <body>
+
+  	<div align="center">
+	  	<div class="panel panel-info" id="form_container" >
+	  		<div style="font-size: 30px;color: #0070D6;"><span><strong>Total Price :</strong>&nbsp;200</span></div>
+	  		<br />
+	  	</div>
+		
+		<div style="margin: 0% 30% 0%" id="contButton">
+			<input type="button" class="btn btn-warning btn-block btn-lg" onclick="document.getElementById('guestDetailsSection').style.display='block';document.getElementById('contButton').style.display='none';" value="Continue..." />
+	  	</div>
+
+	    </div> 
+	</div>
+
+	<div id="guestDetailsSection" style="display: none;">
+		<div class="panel panel-warning" id="guestDetailsPanelSection">
+			<div class="panel-heading" id="guestDetailsPanelHeader">
+				<h3>Enter Your Details...</h3>
+			</div>
+			<div class="panel-body" id="guestDetailsPanelBody">
+				<form>
+				  <div class="form-group">
+				    <label> Name : </label>
+				    <input type="text" class="form-control" id="guestName" placeholder="Enter your name....">
+				  </div>
+				  <div class="form-group">
+				    <label> Email </label>
+				    <input type="email" class="form-control" id="guestEmail" placeholder="Enter your email...">
+				  </div>
+				  <div class="form-group" style="margin: 0;padding: 0;">
+				  	<label style="margin: 0;padding: 0;">Gender : </label>
+				  </div>
+				  <div class="radio" style="margin: o;padding: 0;">
+				    <label>
+				      <input type="radio" name="gender" value="M"> Male
+				    </label>&emsp;
+				    <label>
+				      <input type="radio" name="gender" value="F"> Female
+				    </label>
+				  </div>
+				  <div class="form-group">
+				    <label> Phone No : </label>
+				    <input type="text" class="form-control" id="guestPhoneno" placeholder="Enter your phone no...">
+				  </div>
+				  <div class="form-group">
+				    <label> Do you have a discount code ? &nbsp;</label>
+				    <div class="btn-group" role="group" aria-label="...">
+					  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">yes</button>
+					  <button type="button" class="btn btn-danger">no</button>
+
+
+					  <!-- yes discount modal-->
+					  <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title">Enter your discount code...</h4>
+						      </div>
+						      <div class="modal-body">
+						        <form>
+						       		<input type="text" class="form-control" placeholder="Enter Discount Code Hear..." />
+						        </form>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-primary">Submit Code</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+
+
+					</div>
+				  </div>				  
+				  <div align="right">
+				 	  <button type="submit" class="btn btn-warning btn-lg">Submit</button>				  
+				  </div>
+				</form>
+			</div>
+		</div>
+	</div>
+    
+    <script src="jquery/jquery-2.1.4.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
